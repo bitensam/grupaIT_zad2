@@ -18,14 +18,8 @@ const priorityInput = booksForm['inputPriority'];
 }
 */
 
-const books = [
-  // {
-  //   title: 'Test',
-  //   author: 'Kowalski',
-  //   category: ['Fantasy', 'Education'],
-  //   priority: 5,
-  // },
-];
+// get data from local storage or pass empty array
+const books = JSON.parse(localStorage.getItem('books')) || [];
 
 const getSelectedCategoriesValue = () => {
   let checkedCategories = [];
@@ -49,6 +43,10 @@ const addBook = (title, author, checkedCategories, priority) => {
     checkedCategories,
     priority,
   });
+
+  // store to local storage
+  localStorage.setItem('books', JSON.stringify(books));
+
   return { title, author, checkedCategories, priority };
 };
 
