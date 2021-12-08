@@ -30,11 +30,12 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-top: 4rem;
+
   .hero-left {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 4rem;
 
     img {
       max-width: 40%;
@@ -45,7 +46,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 4rem;
 
     img {
       max-width: 40%;
