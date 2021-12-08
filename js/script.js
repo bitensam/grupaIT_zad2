@@ -4,23 +4,17 @@ const booksForm = document.getElementById('booksForm');
 const bookTable = document.querySelector('.table-body');
 const titleInput = booksForm['inputTitle'];
 const authorInput = booksForm['inputAuthor'];
+const authorAlert = document.querySelector('.authorAlert');
+const titleAlert = document.querySelector('.titleAlert');
 const categoryInputs = document.querySelectorAll(
   `input[name="category"]:checked`
 );
 const priorityInput = booksForm['inputPriority'];
 
-/*
-{
-  title: '',
-  author: '',
-  category: [],
-  priority: number,
-}
-*/
-
 // get data from local storage or pass empty array
 const books = JSON.parse(localStorage.getItem('books')) || [];
 
+// get value of checkboxes
 const getSelectedCategoriesValue = () => {
   let checkedCategories = [];
 
@@ -36,6 +30,7 @@ const getSelectedCategoriesValue = () => {
   return checkedCategories;
 };
 
+// add book with values to an array
 const addBook = (title, author, checkedCategories, priority) => {
   books.push({
     title,
@@ -43,9 +38,6 @@ const addBook = (title, author, checkedCategories, priority) => {
     checkedCategories,
     priority,
   });
-
-  // store to local storage
-  localStorage.setItem('books', JSON.stringify(books));
 
   return { title, author, checkedCategories, priority };
 };
@@ -79,7 +71,19 @@ booksForm.onsubmit = (e) => {
     priorityInput.value
   );
 
-  createBookElement(newBook);
+  if (newBook.title.length < 1) {
+    titleAlert.classList.add('active');
+  }
+  if (newBook.author.length < 3) {
+    authorAlert.classList.add('active');
+  }
+  if (newBook.title.length > 0 && newBook.author.length >= 3) {
+    createBookElement(newBook);
+    titleAlert.classList.remove('active');
+    authorAlert.classList.remove('active');
+    // store to local storage
+    localStorage.setItem('books', JSON.stringify(books));
+  }
 
   titleInput.value = '';
   authorInput.value = '';

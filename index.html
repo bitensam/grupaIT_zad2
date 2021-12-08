@@ -16,8 +16,21 @@
   <body>
     <header>
       <div class="container">
-        <h1>Bookstore</h1>
-        <h2>local storage</h2>
+        <h1 class="header">Book<span>s</span>tore</h1>
+        <div class="hero">
+          <div class="hero-left">
+            <img
+              src="./images/undraw_taking_notes_re_bnaf.svg"
+              alt="reading a book"
+            />
+          </div>
+          <div class="hero-right">
+            <img
+              src="./images/undraw_choose_re_7d5a.svg"
+              alt="a women choosing checkboxes"
+            />
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -36,17 +49,17 @@
               <tr>
                 <th scope="row">A Song of Ice and Fire</th>
                 <td>George R.R. Martin</td>
-                <td>Fantasy SciFi</td>
-                <td>5</td>
-              </tr>
-              <tr>
-                <th scope="row">A Song of Ice and Fire</th>
-                <td>George R.R. Martin</td>
-                <td>Fantasy SciFi</td>
+                <td>Fantasy</td>
                 <td>5</td>
               </tr>
             </tbody>
           </table>
+        </div>
+        <div class="banner">
+          <img
+            src="./images//undraw_book_reading_kx-9-s.svg"
+            alt="reading a book"
+          />
         </div>
         <form id="booksForm" class="mb-5">
           <fieldset>
@@ -57,6 +70,10 @@
               >
               <div class="col-sm-12">
                 <input type="text" class="form-control" id="inputTitle" />
+                <p class="titleAlert">
+                  Please fill up the gaps correctly. Title should contain min. 1
+                  character.
+                </p>
               </div>
             </div>
             <div class="row mb-4">
@@ -65,55 +82,17 @@
               >
               <div class="col-sm-12">
                 <input type="text" class="form-control" id="inputAuthor" />
+                <p class="authorAlert">
+                  Please fill up the gaps correctly. Author should contain min.
+                  3 characters.
+                </p>
               </div>
             </div>
             <div class="row mb-4">
               <div class="col-sm-12">
                 <p>Category</p>
               </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="inputCategoryAlbums"
-                    value="albums"
-                    name="category"
-                  />
-                  <label class="form-check-label" for="inputCategoryAlbums">
-                    Albums
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="inputCategoryBiography"
-                    value="biography"
-                    name="category"
-                  />
-                  <label class="form-check-label" for="inputCategoryBiography">
-                    Biography
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="inputCategoryCooking"
-                    value="cooking"
-                    name="category"
-                  />
-                  <label class="form-check-label" for="inputCategoryCooking">
-                    Cooking
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
+              <div class="col-sm-4 col-md-2">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -127,21 +106,7 @@
                   </label>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="inputCategoryEducation"
-                    value="education"
-                    name="category"
-                  />
-                  <label class="form-check-label" for="inputCategoryEducation">
-                    Education
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
+              <div class="col-sm-4 col-md-2">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -155,49 +120,7 @@
                   </label>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="inputCategoryFiction"
-                    value="fiction"
-                    name="category"
-                  />
-                  <label class="form-check-label" for="inputCategoryFiction">
-                    Fiction
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="inputCategoryHistory"
-                    value="history"
-                    name="category"
-                  />
-                  <label class="form-check-label" for="inputCategoryHistory">
-                    History
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="inputCategoryLiterature"
-                    value="literature"
-                    name="category"
-                  />
-                  <label class="form-check-label" for="inputCategoryLiterature">
-                    Literature
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
+              <div class="col-sm-4 col-md-2">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -218,7 +141,7 @@
               >
             </div>
             <div class="row mb-5">
-              <div class="col-sm-2">
+              <div class="col-sm-1">
                 <input
                   type="number"
                   class="form-control"
@@ -229,12 +152,16 @@
                 />
               </div>
             </div>
-            <button type="submit" class="btn btn-primary">Add new book</button>
+            <button type="submit" class="btn btn-outline-light">
+              Add new book
+            </button>
           </fieldset>
         </form>
       </div>
     </main>
-
+    <footer>
+      <p>Coded by bitensam.</p>
+    </footer>
     <script src="./js/script.js"></script>
   </body>
 </html>
