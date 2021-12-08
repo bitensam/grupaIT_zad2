@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Books Local Storage</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Bookstore</h1>
+        <h2>local storage</h2>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="table-box">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Category</th>
+                <th scope="col">Priority</th>
+              </tr>
+            </thead>
+            <tbody class="table-body">
+              <tr>
+                <th scope="row">A Song of Ice and Fire</th>
+                <td>George R.R. Martin</td>
+                <td>Fantasy SciFi</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <th scope="row">A Song of Ice and Fire</th>
+                <td>George R.R. Martin</td>
+                <td>Fantasy SciFi</td>
+                <td>5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <form id="booksForm" class="mb-5">
+          <fieldset>
+            <legend>Add new Book</legend>
+            <div class="row mb-4">
+              <label for="inputTitle" class="col-sm-2 col-form-label"
+                >Title</label
+              >
+              <div class="col-sm-12">
+                <input type="text" class="form-control" id="inputTitle" />
+              </div>
+            </div>
+            <div class="row mb-4">
+              <label for="inputAuthor" class="col-sm-2 col-form-label"
+                >Author</label
+              >
+              <div class="col-sm-12">
+                <input type="text" class="form-control" id="inputAuthor" />
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-sm-12">
+                <p>Category</p>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inputCategoryAlbums"
+                    value="albums"
+                    name="category"
+                  />
+                  <label class="form-check-label" for="inputCategoryAlbums">
+                    Albums
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inputCategoryBiography"
+                    value="biography"
+                    name="category"
+                  />
+                  <label class="form-check-label" for="inputCategoryBiography">
+                    Biography
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inputCategoryCooking"
+                    value="cooking"
+                    name="category"
+                  />
+                  <label class="form-check-label" for="inputCategoryCooking">
+                    Cooking
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inputCategoryCrime"
+                    value="crime"
+                    name="category"
+                  />
+                  <label class="form-check-label" for="inputCategoryCrime">
+                    Crime
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inputCategoryEducation"
+                    value="education"
+                    name="category"
+                  />
+                  <label class="form-check-label" for="inputCategoryEducation">
+                    Education
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inputCategoryFantasy"
+                    value="fantasy"
+                    name="category"
+                  />
+                  <label class="form-check-label" for="inputCategoryFantasy">
+                    Fantasy
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inputCategoryFiction"
+                    value="fiction"
+                    name="category"
+                  />
+                  <label class="form-check-label" for="inputCategoryFiction">
+                    Fiction
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inputCategoryHistory"
+                    value="history"
+                    name="category"
+                  />
+                  <label class="form-check-label" for="inputCategoryHistory">
+                    History
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inputCategoryLiterature"
+                    value="literature"
+                    name="category"
+                  />
+                  <label class="form-check-label" for="inputCategoryLiterature">
+                    Literature
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inputCategoryRomance"
+                    value="romance"
+                    name="category"
+                  />
+                  <label class="form-check-label" for="inputCategoryRomance">
+                    Romance
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputPriority" class="col-sm-2 col-form-label"
+                >Priority</label
+              >
+            </div>
+            <div class="row mb-5">
+              <div class="col-sm-2">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="inputPriority"
+                  min="1"
+                  max="5"
+                  value="1"
+                />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add new book</button>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

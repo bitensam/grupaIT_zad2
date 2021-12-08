@@ -1,0 +1,22 @@
+header {
+  padding: 2rem 0 6rem;
+  text-align: center;
+}
+
+fieldset {
+  border: 1px solid #eeeeee;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+legend {
+  float: none;
+  display: inline-block;
+  padding: 0 0.5rem;
+  width: auto;
+}
+
+.table-box {
+  margin-bottom: 6rem;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG9CQUFvQjtFQUNwQixrQkFBa0I7QUNDcEI7O0FERUE7RUFDRSx5QkFBeUI7RUFDekIsYUFBYTtFQUNiLHNCQUFzQjtBQ0N4Qjs7QURFQTtFQUNFLFdBQVc7RUFDWCxxQkFBcUI7RUFDckIsaUJBQWlCO0VBQ2pCLFdBQVc7QUNDYjs7QURFQTtFQUNFLG1CQUFtQjtBQ0NyQiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
